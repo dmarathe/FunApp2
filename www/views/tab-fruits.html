@@ -1,0 +1,24 @@
+<ion-view title="{{tab.name}}" padding="true">
+    <ion-content>
+        <ion-slide-box show-pager="false">
+            <!-- <ion-slide>
+                <ion-content><h1>BLUE</h1></ion-content>
+            </ion-slide>
+            <ion-slide>
+                <ion-content><h1>BLUE</h1></ion-content>
+            </ion-slide>
+            <ion-slide>
+                <ion-content><h1>BLUE</h1></ion-content>
+            </ion-slide> -->
+            <ion-slide ng-repeat="fruit in fruits" ng-click="nextSlide()">
+                <!-- <ion-content> -->
+                    <img ng-src="{{ fruit.url }}" />
+                    <h2>{{fruit.name}}</h2>
+                    <div>
+                        {{fruit.info}}
+                    </div>
+                <!-- </ion-content> -->
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+</ion-view>
